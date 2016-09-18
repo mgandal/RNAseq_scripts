@@ -1,1 +1,15 @@
+#!/bin/bash
 
+#FastQC downloaded from: http://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqc
+#MultiQC downloaded from: http://multiqc.info/
+
+dir_fastq=
+dir_fastQC=
+
+
+for read1 in *_R1_001.fastq.gz; do
+  read2=`basename $read1 _R1_001.fastq.gz`_R2_001.fastq.gz
+  echo $read1 $read2
+done
+  
+  
